@@ -5,7 +5,7 @@ import java.util.Locale.IsoCountryCode
 import java.util.UUID
 
 data class Route(
-        val id: UUID = UUID.randomUUID(),
+        val id: UUID? = UUID.randomUUID(),
         val name: String,
         val distance: Double,
         val difficulty: RouteDifficulty,
