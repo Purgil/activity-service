@@ -1,0 +1,24 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: activity-service
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/purgil_activity_db
+    username: purgil_master
+    password: kuaile2515!
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    org.springframework.r2dbc.core.DefaultDatabaseClient: DEBUG
+    io.r2dbc.postgresql: DEBUG
